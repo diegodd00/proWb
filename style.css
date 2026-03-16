@@ -1,244 +1,191 @@
-header{ background:#FF5B5B ;
-padding: 2rem;
-text-align: center;
-color: #fff;
+/* fondo general */
+
+body{
+background: linear-gradient(135deg,#dbeafe,#e0f2fe);
+font-family: Arial, Helvetica, sans-serif;
+margin:0;
+color:#1e293b;
 }
 
-footer{
-background: #685AFF;
-color: white;
-text-align: center;
-padding: 1rem;
-margin-top: 20px;
+/* header */
+
+header{
+background:#38bdf8;
+color:white;
+text-align:center;
+padding:20px;
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* navbar */
 
 nav{
-    background: #F0FFC3;
-    padding: .5rem;
+background:#0ea5e9;
+padding:12px;
 }
 
 nav ul{
-    display: flex;
-    justify-content:center;
-    list-style: none;
+display:flex;
+justify-content:center;
+gap:25px;
+list-style:none;
+margin:0;
+padding:0;
 }
 
-nav ul li a{
-    color: black;
-    text-decoration: none;
-    padding: 0 15px;
+nav a{
+color:white;
+text-decoration:none;
+font-weight:bold;
 }
 
-nav ul li a:hover{
-    color: #ddd;
+nav a:hover{
+color:#e0f2fe;
 }
+
+/* contenedor */
 
 .container{
-    display: flex;
-    max-width: 1000px;
-    margin: 20px auto;
-    gap: 20px;
-    padding: 0 20px;
+display:flex;
+justify-content:center;
+margin-top:40px;
 }
 
-.main-contebt{
-    flex: 3;
+/* contenido */
+
+.main-content{
+background:white;
+padding:30px;
+border-radius:12px;
+box-shadow:0 10px 30px rgba(0,0,0,0.1);
+width:450px;
 }
 
-article{
-    background: #9CCFFF;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
+/* botones */
+
+button{
+background:#38bdf8;
+color:white;
+border:none;
+padding:10px 15px;
+border-radius:8px;
+cursor:pointer;
+transition:all 0.3s ease;
 }
 
-aside{
-    flex: 1;
-    background: #9CCFFF;
-    padding:  20px;
-    border-radius:  8px;
-    height:  fit-content;
-}
-.logo{
-    width: 150px;
-    height: auto;
+button:hover{
+background:#0ea5e9;
+transform:scale(1.05);
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+/* footer */
+
+footer{
+text-align:center;
+padding:20px;
+margin-top:40px;
+background:#38bdf8;
+color:white;
 }
+/* LOGIN */
 
 .login-body{
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #9CCFFF;
+background: linear-gradient(135deg,#dbeafe,#e0f2fe);
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+font-family:Arial;
 }
 
 .login-container{
-    background: white;
-    padding: 40px;
-    border-radius: 10px;
-    width: 320px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+background:white;
+padding:40px;
+border-radius:12px;
+box-shadow:0 10px 30px rgba(0,0,0,0.1);
+width:300px;
+text-align:center;
 }
 
 .login-container h2{
-    text-align: center;
-    margin-bottom: 20px;
-    color: #685AFF;
+margin-bottom:20px;
+color:#0369a1;
 }
 
 .login-container label{
-    display: block;
-    margin-top: 10px;
+display:block;
+margin-top:15px;
+text-align:left;
+font-weight:bold;
+color:#475569;
 }
 
 .login-container input{
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+width:100%;
+padding:10px;
+margin-top:5px;
+border-radius:6px;
+border:1px solid #cbd5f5;
 }
 
-.login-container button{
-    width: 100%;
-    margin-top: 20px;
-    padding: 10px;
-    border: none;
-    background: #FF5B5B;
-    color: white;
-    font-weight: bold;
-    border-radius: 5px;
-    cursor: pointer;
+.login-btn{
+margin-top:20px;
+width:100%;
+padding:12px;
+border:none;
+border-radius:8px;
+background:#38bdf8;
+color:white;
+font-size:16px;
+cursor:pointer;
+transition:all 0.3s ease;
 }
 
-.login-container button:hover{
-    background: #685AFF;
+/* animación botón */
+
+.login-btn:hover{
+background:#0ea5e9;
+transform:scale(1.05);
+box-shadow:0 5px 15px rgba(14,165,233,0.4);
 }
 
-header{
-    background:#FF5B5B;
-    padding: 2rem;
-    text-align: center;
-    color: #fff;
+.login-btn:active{
+transform:scale(0.95);
 }
 
-nav{
-    background: #F0FFC3;
-    padding: .5rem;
+.error{
+color:red;
+margin-top:10px;
+font-size:14px;
 }
 
-nav ul{
-    display: flex;
-    justify-content:center;
-    list-style: none;
+/* tarjetas juegos */
+
+.main-content article{
+background:#fff7ed;
+padding:15px;
+margin-bottom:20px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+transition:transform 0.3s;
 }
 
-nav ul li a{
-    color: black;
-    text-decoration: none;
-    padding: 0 15px;
-    font-weight: bold;
+.main-content article:hover{
+transform:scale(1.05);
 }
 
-nav ul li a:hover{
-    color: #685AFF;
+.main-content img{
+width:100%;
+border-radius:8px;
+margin-top:10px;
 }
 
-.container{
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 0 20px;
+/* animación Vue */
+
+.cards-enter-active{
+transition:all 0.6s ease;
 }
 
-article{
-    background: #9CCFFF;
-    padding: 30px;
-    border-radius: 8px;
-}
-
-article p{
-    margin: 10px 0;
-    font-size: 18px;
-}
-
-footer{
-    background: #685AFF;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    margin-top: 40px;
-}
-
-header{
-    background:#FF5B5B;
-    padding: 2rem;
-    text-align: center;
-    color: #fff;
-}
-
-nav{
-    background: #F0FFC3;
-    padding: .5rem;
-}
-
-nav ul{
-    display: flex;
-    justify-content:center;
-    list-style: none;
-}
-
-nav ul li a{
-    color: black;
-    text-decoration: none;
-    padding: 0 15px;
-    font-weight: bold;
-}
-
-nav ul li a:hover{
-    color: #685AFF;
-}
-
-.container{
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 0 20px;
-}
-
-article{
-    background: #9CCFFF;
-    padding: 30px;
-    border-radius: 8px;
-}
-
-article ul{
-    list-style: none;
-    margin-top: 15px;
-}
-
-article ul li{
-    background: white;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-}
-
-footer{
-    background: #685AFF;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    margin-top: 40px;
+.cards-enter-from{
+opacity:0;
+transform:translateY(30px);
 }

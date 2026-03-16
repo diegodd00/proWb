@@ -1,43 +1,93 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mis Juegos - NXSUS GAMING</title>
-  <link rel="stylesheet" href="style.css">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mis Juegos - NXSUS GAMING</title>
+
+<script src="https://unpkg.com/vue@3"></script>
+
+<link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
 <header>
-  <h1>Mis Juegos</h1>
+<h1>Mis Juegos</h1>
 </header>
 
 <nav>
-  <ul>
-    <li><a href="index.html">Inicio</a></li>
-    <li><a href="perfil.html">Perfil</a></li>
-    <li><a href="login.html">Cerrar sesión</a></li>
-  </ul>
+<ul>
+<li><a href="Nxsus.html">Inicio</a></li>
+<li><a href="perfil.html">Perfil</a></li>
+<li><a href="login.html">Cerrar sesión</a></li>
+</ul>
 </nav>
 
 <main class="container">
-  <section class="main-content">
-    <article>
-      <h2>Biblioteca</h2>
-      <ul>
-        <li>Call of Battle</li>
-        <li>Cyber Future 2077</li>
-        <li>Street Fighters X</li>
-        <li>Speed Racers Pro</li>
-      </ul>
-    </article>
-  </section>
+
+<section class="main-content" id="app">
+
+<article>
+
+<h2>Biblioteca</h2>
+
+<transition-group name="lista" tag="ul">
+
+<li v-for="(juego,index) in juegos" :key="juego">
+
+{{ juego }}
+
+<button class="delete" @click="eliminarJuego(index)">
+❌
+</button>
+
+</li>
+
+</transition-group>
+
+</article>
+
+</section>
+
 </main>
 
 <footer>
-  <p>&copy; 2026 - NXSUS GAMING</p>
+<p>&copy; 2026 - NXSUS GAMING</p>
 </footer>
+
+<script>
+
+const { createApp } = Vue
+
+createApp({
+
+data(){
+return{
+
+juegos:[
+"Call of BATTLE",
+"Cyber Future 2077",
+"Street Fighters X",
+"Speed Racers Pro"
+]
+
+}
+},
+
+methods:{
+
+eliminarJuego(index){
+this.juegos.splice(index,1)
+}
+
+}
+
+}).mount("#app")
+
+</script>
 
 </body>
 </html>

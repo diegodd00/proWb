@@ -1,27 +1,80 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login - NXSUS GAMING</title>
-  <link rel="stylesheet" href="style.css">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login - NXSUS GAMING</title>
+
+<script src="https://unpkg.com/vue@3"></script>
+
+<link rel="stylesheet" href="style.css">
+
 </head>
 
 <body class="login-body">
 
-  <div class="login-container">
-    <h2>Iniciar Sesión</h2>
+<div id="app" class="login-container">
 
-    <form action="index.html">
-      <label>Usuario</label>
-      <input type="text" required>
+<h2>Iniciar Sesión</h2>
 
-      <label>Contraseña</label>
-      <input type="password" required>
+<form @submit.prevent="login">
 
-      <button type="submit">Entrar</button>
-    </form>
-  </div>
+<label>Usuario</label>
+<input type="text" v-model="usuario" required>
+
+<label>Contraseña</label>
+<input type="password" v-model="password" required>
+
+<button class="login-btn">
+Entrar
+</button>
+
+<p class="error" v-if="error">
+Usuario o contraseña incorrectos
+</p>
+
+</form>
+
+</div>
+
+<script>
+
+const { createApp } = Vue
+
+createApp({
+
+data(){
+return{
+
+usuario:"",
+password:"",
+error:false
+
+}
+},
+
+methods:{
+
+login(){
+
+if(this.usuario==="diegopache" && this.password==="admin1Tec"){
+
+window.location.href="juegos.html"
+
+}else{
+
+this.error=true
+
+}
+
+}
+
+}
+
+}).mount("#app")
+
+</script>
 
 </body>
 </html>
